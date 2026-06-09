@@ -1,0 +1,4 @@
+resource "aws_key_pair" "deploy-key" {
+  key_name   = "deploy-key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9ZmyatsrmElPyohPpli9/R6hwyHhP1nLEGgsS4rU6695XZ6/Tb/Q+4ftApLPa/WbGiAcsYyoJzjgBWe/pdOXAUaNFy2Obl2dd3ErFaBfASLgT7Vn1BSswisoYAi6LOpSuhBh02Ec8m7O6BJhNFmxQeu8qCyST6XTTLV1/5i+U+XQrl/nmxmoU44IZNpInHVnbsiCYxA7h+fPaBDoo7haB57+TAVV6L2XA3vK02Szpv5dbqB4kyHUdKbeG4m5jxVxP+dNJx84VTNqelCNLimVXiRV9tpLzQcjqR8zAmJUQVufphKNZ6ssbEihspYRRs3dovz4RCnP7oUr7z4KAIj2fb8SKzyZHBDKL9ptm5CpBYBcWhqq+00w+b1k/2bSJ6z8H+hTJVWT1Akv7I60p1aOktoZdITIrCwk8C2RshGumT3LTa1Na/iTjwf+AokR0X1UthD/lurSmyT1aio/00/lcjcP3VIxKRtGcEjExeJ6NvNG4lwBZ6s+LjpEMXSigE6s= anurag shukla@LAPTOP-GRL5SM4S"
+}
