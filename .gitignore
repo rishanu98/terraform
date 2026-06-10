@@ -2,3 +2,5 @@
 **/*.backup
 **/.terraform.lock.hcl
 Keypair.tf
+*.tfstate
+terraform.tfstate
