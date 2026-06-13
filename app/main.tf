@@ -88,8 +88,10 @@ resource "aws_instance" "web_server" {
     destination = "/home/ubuntu/app.py"
 
   }
-
-   provisioner "remote-exec" {
+ # Redirect stderr(2) to wherever stdout(1) is going, which is app.log in this case.
+ # This way we can capture any errors that occur during the execution of the app.py
+ # script in the app.log file for troubleshooting purposes.
+  provisioner "remote-exec" {
     inline = [
         "echo 'Running remote commands to set up the Flask web app and start the application'",
         "sudo apt update -y",
@@ -98,7 +100,7 @@ resource "aws_instance" "web_server" {
         "sudo apt install python3.14-venv -y",
         "cd /home/ubuntu",
         "sudo apt install python3-flask -y",
-        "sudo python3 app.py"
+        "sudo bash -c 'nohup python3 /home/ubuntu/app.py > /home/ubuntu/app.log 2>&1 &'",
     ]
     }
 
