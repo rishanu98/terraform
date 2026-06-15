@@ -12,8 +12,3 @@ variable "public_subnet_ids" {
   description = "List of public subnet IDs for the ALB"
   type        = list(string)
 }
-
-variable "instance_ids" {
-  description = "List of instance IDs to attach to the target group"
-  type        = list(string)
-}

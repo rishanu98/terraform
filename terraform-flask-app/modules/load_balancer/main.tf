@@ -13,14 +13,6 @@ resource "aws_lb_target_group" "app_tg" {
   }
 }
 
-resource "aws_lb_target_group_attachment" "web-tg-attachment" {
-
-  count = length(var.instance_ids)
-  target_group_arn = aws_lb_target_group.app_tg.arn
-  target_id        = var.instance_ids[count.index]
-  port             = 80
-} 
-
 resource "aws_lb" "app_lb" {
   name               = "app-lb"
   internal           = false

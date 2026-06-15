@@ -5,6 +5,10 @@ variable "vpc_cidr" {
 variable "public_subnets_cidr" {
   type = list(string)
 }
+variable "bucket_name" {
+  description = "Name of the S3 bucket for Terraform state storage"
+  type        = string
+}
 
 variable "azs" {
   type = list(string)

@@ -14,6 +14,8 @@ ami_id = "ami-0b6d9d3d33ba97d99"
 
 instance_type = "t2.micro"
 
-key_name = "web-app-key"
-
 public_key_path = "~/.ssh/id_rsa.pub"
+
+bucket_name = "terraform-statefile0312"
+
+key_name = "web-app-key"

@@ -3,7 +3,7 @@ resource "aws_key_pair" "web_app_key" {
   public_key = file(var.public_key_path)
 }
 
-resource "aws_instance" "web_server" {
+/*resource "aws_instance" "web_server" {
   count = length(var.public_subnet_ids)
   ami                         = var.ami_id
   instance_type               = var.instance_type
@@ -17,4 +17,4 @@ resource "aws_instance" "web_server" {
   tags = {
     Name = "app-${count.index}"
   }
-}
+}*/
