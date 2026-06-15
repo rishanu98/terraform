@@ -4,3 +4,4 @@
 Keypair.tf
 *.tfstate
 terraform.tfstate
+.venv

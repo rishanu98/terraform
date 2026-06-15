@@ -63,25 +63,31 @@ Update `terraform.tfvars` or provide values via `-var` when running Terraform.
 
 ## Usage
 
-1. Initialize Terraform:
+1. Change into the `terraform-web-app` directory:
+
+```bash
+cd terraform-web-app
+```
+
+2. Initialize Terraform:
 
 ```bash
 terraform init
 ```
 
-2. Review the planned changes:
+3. Review the planned changes:
 
 ```bash
 terraform plan
 ```
 
-3. Apply the deployment:
+4. Apply the deployment:
 
 ```bash
 terraform apply
 ```
 
-4. Destroy the infrastructure when finished:
+5. Destroy the infrastructure when finished:
 
 ```bash
 terraform destroy
