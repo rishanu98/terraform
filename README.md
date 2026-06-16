@@ -29,9 +29,6 @@ The website content is served from EC2 instances behind an ALB, using a template
   - `asg/` - Launch template, Auto Scaling Group, and scaling policy
   - `keypair/` - SSH key pair configuration
   - `s3/` - S3 bucket resource definition
-- `app/`
-  - `app.py` - simple web page application
-  - `requirements.txt` - Python dependency file
 
 ## Prerequisites
 
@@ -56,7 +53,6 @@ Update `terraform.tfvars` or provide values via `-var` when running Terraform.
 - `ami_id` - default: `ami-0b6d9d3d33ba97d99`
 - `instance_type` - default: `t2.micro`
 - `key_name` - default: `web-app-key`
-- `ssh_my_ip` - default: `141.72.242.43/32`
 - `app_port` - default: `5000`
 
 > Note: The default `ssh_my_ip` value is currently hardcoded in the root variables and security module. Update this to your own IP if you want SSH access to web instances.
